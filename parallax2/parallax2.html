@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href=""
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="style2.css" />
+    <title>Document</title>
+    <script>
+      function castParallax() {
+        var opThresh = 350;
+        var opFactor = 750;
+
+        window.addEventListener("scroll", function (event) {
+          var top = this.pageYOffset;
+
+          var layers = document.getElementsByClassName("parallax");
+          var layer, speed, yPos;
+          for (var i = 0; i < layers.length; i++) {
+            layer = layers[i];
+            speed = layer.getAttribute("data-speed");
+            var yPos = -((top * speed) / 100);
+            layer.setAttribute(
+              "style",
+              "transform: translate3d(0px, " + yPos + "px, 0px)"
+            );
+          }
+        });
+      }
+
+      document.body.onload = castParallax();
+    </script>
+  <body>
+    
+    <!-- Navbar area -->
+    <div class="main">
+
+<div class="topnav">
+  <a class="active" href="/parallax2.html">Home</a>
+  
+  <a href="/contact.html">Contact</a>
+  <a href="/about.html">About</a>
+</div>
+    <!--parallax starts and navbar ends  -->
+    <div class="keyart" id="parallax">
+      <div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>
+      <div class="keyart_layer parallax" id="keyart-1" data-speed="5"></div>
+      <div class="keyart_layer parallax" id="keyart-2" data-speed="11"></div>
+      <div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div>
+      <div class="keyart_layer parallax" id="keyart-4" data-speed="26"></div>
+      <div class="keyart_layer parallax" id="keyart-5" data-speed="36"></div>
+      <div class="keyart_layer parallax" id="keyart-6" data-speed="49"></div>
+      <div class="keyart_layer" id="keyart-scrim"></div>
+      <div class="keyart_layer parallax" id="keyart-7" data-speed="69"></div>
+      <div class="keyart_layer" id="keyart-8" data-speed="100"></div>
+    </div>
+    <div class="container">
+      
+      <div class="container2">
+        <div id="main2">
+          <div class="overview">
+            <h1>Introduction</h1>
+            <p>This website is made by:</p>
+            <div class="name">
+              <ul>
+                <li><span class="hiddentxt"><a>Gunwant Sonkusare</a></span><span class="hiddenimg"><img src="adi.jpeg" width="250" /></span></li>
+                <li><span class="hiddentxt"><a>Aniket Nehare</a></span><span class="hiddenimg"><img src="aniket.jpeg" width="250" /></span></li>
+                <li><span class="hiddentxt"><a>Arpit Tamrakar</a></span><span class="hiddenimg"><img src="arpit.jpeg" width="250" /></span></li>
+    
+              </ul>
+              
+                
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="container3">
+        <h1>Connect us through</h1>
+        <ul>
+          <li><i class="fab fa-facebook-f"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <li><i class="fab fa-linkedin-in"></i></li>
+          <li><i class="fab fa-youtube"></i></li>
+       </ul>
+      </div>
+
+      
+      <div class="container4">
+        <h1>ThankYou</h1>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
